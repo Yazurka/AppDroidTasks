@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">main</string>
+    <string name="app_name">Birthday list maker</string>
+    <string name="person_name_label">Name:</string>
+    <string name="person_name_default">Write name of friend</string>
+    <string name="select_date_label">Birthday:</string>
+    <string name="submit_friend_button">Save friend</string>
+    <string name="birthday_list">Birthday list</string>
+    <string name="add_birthday_success">Birthday added successfully</string>
+    <string name="show_friends_button">Show friends</string>
+    <string name="date_format">DD.MM.YY</string>
+
 </resources>
