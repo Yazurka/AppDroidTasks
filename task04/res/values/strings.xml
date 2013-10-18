@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">fragments</string>
+    <string name="menu_prev_text">Prev</string>
+    <string name="menu_next_text">Next</string>
+
+    <string-array name="picture_names" >
+        <item>pic.jpg</item>
+        <item>pic1.jpg</item>
+        <item>pic2.jpg</item>
+        <item>pic3.jpg</item>
+    </string-array>
+
+
+</resources>

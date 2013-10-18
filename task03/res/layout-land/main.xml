@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+<TableLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
@@ -90,4 +96,15 @@
             android:onClick="showFriends" />
     </TableRow>
 
+
+
 </TableLayout>
+    <ListView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/vertical_list"
+        android:layout_gravity="center_vertical|left|top">
+
+        </ListView>
+
+</LinearLayout>
