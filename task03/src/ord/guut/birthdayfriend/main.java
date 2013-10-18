@@ -3,7 +3,7 @@ package ord.guut.birthdayfriend;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class main extends Activity {
+public class Main extends Activity {
     /**
      * Called when the activity is first created.
      */
