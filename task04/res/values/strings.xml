@@ -3,6 +3,11 @@
     <string name="app_name">fragments</string>
     <string name="menu_prev_text">Prev</string>
     <string name="menu_next_text">Next</string>
+    <string name="pic_0_description">Oats is healthy! All year!</string>
+    <string name="pic_1_description">Aurora Bolearis is very beautiful, especially in winter time!</string>
+    <string name="pic_2_description">There is nothing cuter in the world than a kid polar bear.</string>
+    <string name="pic_3_description">Abstract hand art. Nothing disturbing about that.</string>
+    <string name="pic_not_found">Sorry, no information about picture found...</string>
 
     <string-array name="picture_names" >
         <item>pic.jpg</item>
