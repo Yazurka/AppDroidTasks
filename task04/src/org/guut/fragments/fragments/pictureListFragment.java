@@ -17,6 +17,8 @@ import org.guut.fragments.R;
 import java.util.ArrayList;
 
 public class pictureListFragment extends ListFragment {
+    public int selectedPicture;
+    public ArrayList<Integer> pictures;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d("myDebug", "onCreateView running");
@@ -28,6 +30,7 @@ public class pictureListFragment extends ListFragment {
     private void fillList(){
         Log.d("myDebug", "fillList running");
         ArrayList<Integer> pictureNames = pictureNames();
+        pictures = pictureNames;
         this.setListAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, pictureNames));
         Log.d("myDebug", "fillList done");
     }
@@ -46,17 +49,35 @@ public class pictureListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Log.d("myDebug", "onListItemClick running");
+        changeFragments(position);
+        setSelectedPicture(position);
+        super.onListItemClick(l, v, position, id);
+        Log.d("myDebug", "onListItemClick done");
+    }
+
+    private void changeFragments(int position) {
         Activity a = getActivity();
         ImageView iv = (ImageView)a.findViewById(R.id.picture_imageView);
         TextView tw = (TextView)a.findViewById(R.id.picture_description);
         iv.setImageResource(findPictureId(position));
         tw.setText(findTextId(position));
-        super.onListItemClick(l, v, position, id);
-        Log.d("myDebug", "onListItemClick done");
     }
-/*
- *  Not a very intuitive design, but it works!
- */
+
+    public void changeFragmentPictureById(Integer i){
+        setSelectedPicture(i);
+        changeFragments(pictures.indexOf(selectedPicture));
+    }
+
+    private void setSelectedPicture(Integer i){
+        if(pictures.contains(i))
+            selectedPicture = i;
+        else
+            selectedPicture = pictures.get(0);
+    }
+
+    /*
+     *  Not a very intuitive design, but it works!
+     */
     private int findPictureId(int p) {
         Log.d("myDebug", "findPictureId running");
         switch (p){
