@@ -7,19 +7,17 @@
     android:weightSum="1"
     android:baselineAligned="false">
     <fragment
-        android:layout_width="167dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:name="org.guut.fragments.fragments.pictureListFragment"
         android:id="@+id/picture_list_fragment"
-        tools:layout="@layout/pictureListFragment"
-        />
+        tools:layout="@layout/picturelistfragment" />
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5">
         <fragment
@@ -27,13 +25,13 @@
             android:layout_height="wrap_content"
             android:name="org.guut.fragments.fragments.pictureFrameFragment"
             android:id="@+id/picture_picture_fragment"
-            tools:layout="@layout/pictureFrameFragment" />
+            tools:layout="@layout/pictureframefragment" />
         <fragment
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:name="org.guut.fragments.fragments.pictureTextFragment"
             android:id="@+id/picture_description_fragment"
-            tools:layout="@layout/pictureTextFragment"
+            tools:layout="@layout/picturetextfragment"
             />
 
         </LinearLayout>
