@@ -5,10 +5,10 @@ import android.app.ListFragment;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SimpleCursorAdapter;
-import android.widget.Toast;
 
 import org.guut.task05.Author;
 import org.guut.task05.Book;
@@ -29,17 +29,14 @@ public class BookActivity extends Activity {
         ArrayList<Book> books = reader.getBooks();
         for (int i = 0; i < books.size(); i++) {
             Book book = books.get(i);
+            Log.d("MyDebug", book.toString());
             ArrayList<Author> authors = book.getAuthors();
             for (int j = 0; j < authors.size(); j++) {
                 Author author =  authors.get(j);
+                Log.d("MyDebug", author.toString());
                 long id = db.insert(author.toString(), book.toString());
             }
         }
-
-    	Cursor c = db.getAllBookAuthors();
-
-        showAuthors(c);
-        Toast.makeText(this, getAllInColumn(c,0), Toast.LENGTH_LONG).show();
     }
     @Override
     public void onDestroy() {
