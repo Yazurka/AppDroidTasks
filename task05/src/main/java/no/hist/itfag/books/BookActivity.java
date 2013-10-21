@@ -1,15 +1,20 @@
 package no.hist.itfag.books;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.ListFragment;
 import android.database.Cursor;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
-import android.support.v4.app.NavUtils;
-import android.support.v4.widget.CursorAdapter;
-import android.support.v4.widget.SimpleCursorAdapter;
+
+import org.guut.task05.Author;
+import org.guut.task05.Book;
+import org.guut.task05.BookReader;
+
+import java.util.ArrayList;
 
 public class BookActivity extends Activity {
 	private DBAdapter db;
@@ -20,13 +25,19 @@ public class BookActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         db = new DBAdapter(this);
         db.open();
- /*       long id = db.insert("Wei-Meng Lee", "Beginning Android 4");
-        id = db.insert("Mildrid Ljosland", "Programmering i C++");
-        id = db.insert("Else Lervik", "Programmering i C++");
-        id = db.insert("Mildrid Ljosland", "Algoritmer og datastrukturer");
-        id = db.insert("Helge Hafting", "Algoritmer og datastrukturer");*/
- //   	Cursor c = db.getAllBookAuthors();
-        Cursor c = db.getBooksByAuthor("Mildrid Ljosland");
+        BookReader reader = new BookReader(this);
+        ArrayList<Book> books = reader.getBooks();
+        for (int i = 0; i < books.size(); i++) {
+            Book book = books.get(i);
+            ArrayList<Author> authors = book.getAuthors();
+            for (int j = 0; j < authors.size(); j++) {
+                Author author =  authors.get(j);
+                long id = db.insert(author.toString(), book.toString());
+            }
+        }
+
+    	Cursor c = db.getAllBookAuthors();
+
         showAuthors(c);
         Toast.makeText(this, getAllInColumn(c,0), Toast.LENGTH_LONG).show();
     }

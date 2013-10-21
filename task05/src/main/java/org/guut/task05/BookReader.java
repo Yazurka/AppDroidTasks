@@ -7,16 +7,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 import no.hist.itfag.books.R;
 
 public class BookReader{
     private final Context context;
-    private ArrayList<String> books = new ArrayList<>();
+    private ArrayList<String> lines;
+    private ArrayList<Book> books;
 
     public BookReader(Context context){
         this.context = context;
+        lines = new ArrayList<>();
         this.fetchSource();
+        this.books = createBooks();
     }
 
     private void fetchSource(){
@@ -28,21 +32,40 @@ public class BookReader{
                     addToList(line.trim());
                 }
             } catch (IOException e) {
-                System.out.println("Can't read file...");
+                e.printStackTrace();
             }
             reader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Can't find file...");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void addToList(String line) {
-        books.add(line);
+        lines.add(line);
     }
 
     public ArrayList<String> getLines() {
+        return lines;
+    }
+
+    private ArrayList<Book> createBooks(){
+        ArrayList<Book> books = new ArrayList<>();
+        for (int i = 0; i < lines.size(); i++) {
+            String line = lines.get(i);
+            String[] st = line.split(";");
+            Author author = new Author(st[1],st[0]);
+            Book book = new Book(st[2]);
+            if(!books.contains(book)){
+                book.addAuthor(author);
+                books.add(book);
+            }else{
+                books.get(books.indexOf(book)).addAuthor(author);
+            }
+        }
+        return books;
+    }
+
+    public ArrayList<Book> getBooks(){
         return books;
     }
 }
