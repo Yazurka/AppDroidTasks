@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AppName</string>
+    <string name="app_name">Guess</string>
     <string name="hello">Hello, World!</string>
+    <string name="player_form_name">NAME</string>
+    <string name="player_form_credit_card">CREDIT CARD NUMBER</string>
+    <string name="player_form_credit_card_hint">Enter your credit card number</string>
+    <string name="player_form_name_hint">Enter your name</string>
+    <string name="nav_button_start_game">START OVER</string>
+    <string name="nav_button_send">SEND</string>
 </resources>

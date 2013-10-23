@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:padding="@dimen/text_normal"
+        android:text="@string/player_form_name"
+        android:textColor="@color/cyan"
+        android:textStyle="bold"
+        />
+    <View
+        android:layout_height="@dimen/activity_horizontal_rule"
+        android:layout_width="fill_parent"
+        android:background="@color/cyan"
+        />
+    <EditText
+        android:id="@+id/player_form_name"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="@string/player_form_name_hint"
+        android:padding="@dimen/activity_horizontal_margin"
+        />
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/text_normal"
+        android:paddingRight="@dimen/text_normal"
+        android:paddingBottom="@dimen/text_normal"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:text="@string/player_form_credit_card"
+        android:textColor="@color/cyan"
+        android:textStyle="bold"
+        />
+    <View
+        android:layout_height="@dimen/activity_horizontal_rule"
+        android:layout_width="fill_parent"
+        android:background="@color/cyan"
+        />
+    <EditText
+        android:id="@+id/player_form_credit_card_info"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:hint="@string/player_form_credit_card_hint"
+        android:inputType="number"/>
+
+</LinearLayout>
