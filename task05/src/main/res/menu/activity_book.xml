@@ -5,5 +5,11 @@
         android:showAsAction="never"
         android:onClick="openSettings"
         />
+    <item android:id="@+id/menu_load_books"
+        android:title="@string/menu_load_books"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:onClick="loadBooks"
+        />
 
 </menu>

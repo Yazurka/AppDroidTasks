@@ -6,8 +6,8 @@
         <item>Pink</item>
     </string-array>
     <string-array name="type_values">
-        <item>@color/black</item>
-        <item>@color/white</item>
-        <item>@color/pink</item>
+        <item>000000</item>
+        <item>FFFFFF</item>
+        <item>FF00FF</item>
     </string-array>
 </resources>
