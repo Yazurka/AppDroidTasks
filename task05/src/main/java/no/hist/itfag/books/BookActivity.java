@@ -2,12 +2,16 @@ package no.hist.itfag.books;
 
 import android.app.Activity;
 import android.app.ListFragment;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 import android.widget.SimpleCursorAdapter;
 
 import org.guut.task05.Author;
@@ -21,7 +25,6 @@ public class BookActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         db = new DBAdapter(this);
         db.open();
@@ -68,7 +71,14 @@ public class BookActivity extends Activity {
         return true;
     }
 
-    
+    public void openSettings(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_settings:
+                Intent i = new Intent("org.guut.task05.SettingsActivity");
+                startActivity(i);
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -79,4 +89,14 @@ public class BookActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        SharedPreferences sp = getSharedPreferences(getPackageName()+"_preferences", MODE_PRIVATE);
+        String color = sp.getString("pref_color", "FFFFFF");
+        Log.d("myDebug", sp.getAll().toString());
+        Color c = new Color();
+        rl.setBackgroundColor(Color.parseColor("#"+color));
+        setContentView(rl);
+        super.onResume();
+    }
 }
