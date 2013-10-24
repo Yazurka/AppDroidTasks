@@ -8,10 +8,9 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_margin="@dimen/activity_horizontal_rule"
-
         android:textStyle="bold"
         android:text="@string/nav_button_send"
-
+        android:onClick="updateGame"
         />
     <Button
         android:id="@+id/nav_start_over_button"
@@ -19,8 +18,8 @@
         android:layout_width="fill_parent"
         android:layout_margin="@dimen/activity_horizontal_rule"
         android:text="@string/nav_button_start_game"
-
         android:textStyle="bold"
         android:enabled="false"
+        android:onClick="startOver"
         />
 </LinearLayout>

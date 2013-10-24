@@ -8,4 +8,19 @@
     <string name="player_form_name_hint">Enter your name</string>
     <string name="nav_button_start_game">START OVER</string>
     <string name="nav_button_send">SEND</string>
+    <string name="http_get_firstname">navn</string>
+    <string name="http_get_card_number">kortnummer</string>
+    <string name="http_get_number">tall</string>
+    <string name="base_url">http://tomcat.stud.aitel.hist.no/studtomas/tallspill.jsp?</string>
+    <string name="nav_button_quess">GUESS</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+    <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    <string name="num9">9</string>
+    <string name="num10">10</string>
 </resources>

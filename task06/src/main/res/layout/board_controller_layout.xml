@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="guessNumber"
+        android:text="@string/num1"
+        />
+
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="guessNumber"
+        android:text="@string/num2"
+        />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="guessNumber"
+        android:text="@string/num3"
+        />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="guessNumber"
+        android:text="@string/num4"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="guessNumber"
+            android:text="@string/num5"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="guessNumber"
+            android:text="@string/num6"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="guessNumber"
+            android:text="@string/num7"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="guessNumber"
+            android:text="@string/num8"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="guessNumber"
+            android:text="@string/num9"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:onClick="guessNumber"
+            android:text="@string/num10"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

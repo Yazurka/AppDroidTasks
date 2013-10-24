@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/play_board_server_text"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:name="org.guut.task06.fragments.BoardServerSources"
+        tools:layout="@layout/board_server_source_layout" />
+
+    <fragment
+        android:id="@+id/play_board_controller"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:name="org.guut.task06.fragments.BoardController"
+        tools:layout="@layout/board_controller_layout" />
+</LinearLayout>

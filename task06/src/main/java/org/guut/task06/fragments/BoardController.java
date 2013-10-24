@@ -13,9 +13,9 @@ import org.guut.task06.R;
  *
  * @author Jørgen Lien Sellæg
  */
-public class PlayBoard extends Fragment {
+public class BoardController extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.player_play_board, container, false);
+        return inflater.inflate(R.layout.board_controller_layout,container,false);
     }
 }
