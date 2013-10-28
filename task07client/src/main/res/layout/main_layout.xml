@@ -2,11 +2,72 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/default_horizontal_margin"
+    android:layout_marginRight="@dimen/default_horizontal_margin"
+    android:layout_marginTop="@dimen/default_margin">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
+        android:text="@string/write_numbers"
+        android:textStyle="bold"
+        android:padding="@dimen/default_margin"
         android:id="@+id/textView" />
+    <View
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:background="#FFFFFF"
+        />
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:weightSum="1">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_weight="0.5"
+        android:id="@+id/firstNumber" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="+"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_weight="0.5"
+        android:id="@+id/secondNumber" />
+    </LinearLayout>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:onClick="calculate"
+        android:text="Calculate"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sum"
+        android:textStyle="bold"
+        android:padding="@dimen/default_margin"
+        android:id="@+id/textView" />
+    <View
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:background="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:padding="@dimen/default_margin"
+        android:text="SUM GOES HERE"
+        android:id="@+id/sum" />
+
+
 </LinearLayout>
